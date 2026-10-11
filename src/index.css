@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Fraunces', 'Cinzel', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    
+    /* Wes Anderson Grand Budapest Palette */
+    --color-cream: #FDFBF7;
+    --color-cashew: #F5EBE1;
+    --color-cashew-dark: #EADBC8;
+    --color-pink-soft: #FDE8F0;
+    --color-pink: #F7B5CD;
+    --color-pink-deep: #E88AA7;
+    --color-lime-soft: #F1F8E4;
+    --color-lime: #D2E59E;
+    --color-lime-deep: #A7C55E;
+    --color-mustard: #F4C462;
+    --color-mustard-deep: #DCA136;
+    --color-peach: #FFD4BA;
+    --color-plum: #2D1A29;
+    --color-plum-light: #4A2B43;
+    --color-espresso: #201717;
+    --color-burgundy: #521828;
+    --color-teal: #1F4E4B;
+    --color-violet: #6E2D5B;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-cream);
+    color: var(--color-plum);
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, .font-serif-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.015em;
+  }
+
+  .font-hotel-badge {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.12em;
+  }
+
+  .font-mono-numbers {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom scrollbar for pleasant touch/mouse feeling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F5EBE1;
+}
+::-webkit-scrollbar-thumb {
+  background: #E88AA7;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2D1A29;
+}
+
+/* Subtle stamp & hotel ledger borders */
+.hotel-card {
+  background-color: #FFFFFF;
+  border: 2px solid #2D1A29;
+  box-shadow: 3px 3px 0px #2D1A29;
+}
+
+.hotel-card-subtle {
+  background-color: #FDFBF7;
+  border: 1.5px solid #EADBC8;
+  box-shadow: 2px 2px 0px #EADBC8;
+}
+
+.hotel-card-interactive {
+  background-color: #FFFFFF;
+  border: 2px solid #2D1A29;
+  box-shadow: 3px 3px 0px #2D1A29;
+  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hotel-card-interactive:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px #2D1A29;
+}
+
+.hotel-card-interactive:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px #2D1A29;
+}

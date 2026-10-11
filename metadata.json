@@ -1,0 +1,6 @@
+{
+  "name": "The Grand Academic Hotel — College Life OS",
+  "description": "A whimsical Wes Anderson-inspired college life operating system featuring authentic streak tracking, academic semester planner, RPG progression, and daily command center.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
